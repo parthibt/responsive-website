@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+:root{
+    --back-color: #f8f7f4;
+    --before-color: #30ce88;
+    --circle-one: #27a09e;
+    --circle-two: #4a3341;
+    --text-color: #009c8e;
+    --circle-three: #ffa8bf;
+    --back2-color: #ffdb6a;
+}
+body{
+    line-height: 1.5;
+    font-size: 1rem;
+    font-family: 'Inconsolata', monospace;
+    overflow-x: hidden;
+}
+.contanier{
+    max-width: 100%;
+    height: 100vh;
+    background: var(--back-color);
+    position: relative;
+    z-index: 1;
+    
+}
+/*.circle{
+    width: 100%;
+    height: 100vh;
+    clip-path: circle(5.55%);
+    position: absolute;
+    left: -18%;
+    top: -30%;
+    box-shadow: 1px 1px 5px -1px rgba(48, 206, 136, 0.77);
+    filter: blur(50%);
+    background: linear-gradient(to right ,var(--circle-one),var(--circle-three),var(--circle-two));
+    
+}*/
+.contanier::before{
+    content: '';
+    width: 100%;
+    height: 50%;
+    inset: 0;
+    position: absolute;
+    left: 40%;
+    bottom: 30%;
+    top: -30%;
+    transform: skew(-5deg, -8deg);
+    background: linear-gradient(40deg,var(--before-color),var(--back2-color));
+    border-bottom-left-radius: 50px;
+    box-shadow: 2px 2px 5px -1px rgba(48, 206, 136, 0.77);
+    filter: blur(30%);
+    z-index: -1;
+}
